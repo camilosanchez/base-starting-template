@@ -54,7 +54,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
-# Public contents don't need to be tracked
-public/css/
-public/js/
