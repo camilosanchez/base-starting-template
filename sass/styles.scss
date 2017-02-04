@@ -1,0 +1,36 @@
+
+/*
+ * Frontend tooling starting template
+ *
+ * Copyright (c) 2017 Camilo Sanchez
+ * Licensed under the MIT license.
+ */
+
+/*! Frontend tooling starting template v0.0.1 | MIT License | github.com/ */
+
+/* Document
+   ========================================================================== */
+
+/* Third party vendor styles
+   ======================================*/
+
+//Normalize
+@import "normalize.css";
+
+//uncomment next line if you want to use the superawesome Susy sass library. More info on it here: https://github.com/oddbird/susy/
+@import "susy";
+
+// Breakpoint to write media queries in Sass in a super simple way.
+@import "breakpoint-sass";
+
+/* App partials
+   ======================================*/
+
+// General partials
+@import "partials/variables";
+@import "partials/typography";
+@import "partials/buttons";
+@import "partials/figures";
+
+// App specific partials
+// - this is where you put code for specific components and sections of your UI
