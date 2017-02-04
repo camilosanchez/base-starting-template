@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --source-map true --include-path scss sass/styles.scss --output-style compressed -o public/css/ --importer node_modules/node-sass-import",
     "watch-css": "nodemon -e scss -x 'npm run build-css'",
-    "build-js": "browserify /js-modules/main.js -o public/js/bundle.js",
+    "build-js": "browserify ./js-modules/main.js -o public/js/bundle.js",
     "watch-js": "watchify --debug ./js-modules/main.js -o public/js/bundle.js -v",
     "browsersync": "browser-sync start --files 'public/css/*.css, public/js/*.js, *.html' --server",
     "start": "npm run watch-css & npm run watch-js & npm run browsersync"
