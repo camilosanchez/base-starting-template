@@ -17,11 +17,27 @@ I find this approach super convenient because you write super high maintainable 
 
 **NPM**
 
+**Step 1**
 Once you cloned this repo just `cd` to the directory and type this:
 
 ```sh
 npm install
 ```
+
+**Step 2**
+Build js files needed for the first time. Type:
+
+```sh
+npm run build-js
+```
+
+**Step 3**
+Start the local server and begin your magic! Type:
+
+```sh
+npm run start
+```
+**Note:** If you can't see the css applied at this point and just see the default styles from the browser, don't worry just refresh your browser and you will see it.
 
 ## What does it do, what's the point?
 
