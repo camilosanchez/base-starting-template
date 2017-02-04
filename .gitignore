@@ -56,4 +56,5 @@ typings/
 .env
 
 # Public contents don't need to be tracked
-public/
+public/css/
+public/js/
