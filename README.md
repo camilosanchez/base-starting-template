@@ -13,6 +13,16 @@ I left there the basic partials you need to set up like typography, buttons, fig
 
 I find this approach super convenient because you write super high maintainable code as you modularize your components into different sass and js files, and in the end you only have to load one css and one js without losing that maintainability. You also can take advantage of `requirejs` on the browser with browserify.
 
+**Chris Edit**
+
+In this This version of the template I remove Susy from the main arsenal a create a estructure that use 2 git repositories: 1 for controlling versions of your development area and another one to back-up files (push to master method). 
+
+## First Steps
+0. Rename the project: (template=name of your project)
+1. Remove the remote origin
+2. Delete Git from the project
+3. Start a Individual Git Repo on each sub-folder: ./template_dev is going to be your development area and ./prod are going to be the files that goes to production
+
 ## Installation
 
 **NPM**
@@ -38,6 +48,13 @@ Start the local server and begin your magic! Type:
 npm run start
 ```
 **Note:** If you can't see the css applied at this point and just see the default styles from the browser, don't worry just refresh your browser and you will see it.
+
+**Step 4**
+when finished, copy the files that go to production.
+
+```sh
+npm run build-prod
+```
 
 ## What does it do, what's the point?
 
@@ -73,12 +90,5 @@ Created by Camilo Sanchez.
 - [Medium](https://medium.com/@camilosanchez)
 - email: camilosanchez40ATgmail.com
 
-## Export needed files to production
 
-
-**NPM**
-
-```sh
-npm run build-prod
-```
 
