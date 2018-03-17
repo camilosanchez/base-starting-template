@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --source-map true --include-path scss sass/styles.scss --output-style compressed -o public/css/ --importer node_modules/node-sass-import",
+    "build-css": "node-sass --source-map true --include-path scss sass/styles.scss --output-style compressed -o assets/css/ --importer node_modules/node-sass-import",
     "watch-css": "nodemon -e scss -x 'npm run build-css'",
-    "build-js": "browserify ./js-modules/main.js -o public/js/bundle.js",
-    "watch-js": "watchify --debug ./js-modules/main.js -o public/js/bundle.js -v",
-    "browsersync": "browser-sync start --files 'public/css/*.css, public/js/*.js, *.html' --server",
+    "build-js": "browserify ./js-modules/main.js -o assets/js/bundle.js",
+    "watch-js": "watchify --debug ./js-modules/main.js -o assets/js/bundle.js -v",
+    "browsersync": "browser-sync start --files 'assets/css/*.css, assets/js/*.js, *.html' --server",
     "start": "npm run watch-css & npm run watch-js & npm run browsersync",
-    "copy-html": "find . -name '*.html' | grep -v ./js-modules | cpio -updm ../prod",
+    "copy-html": "find . -name '*.html' | grep -v ./node_modules | cpio -updm ../prod",
     "copy-assets": "cp -r ./assets ../prod",
     "build-prod": "npm run copy-html && npm run copy-assets"
   },
