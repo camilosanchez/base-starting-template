@@ -54,3 +54,10 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# Do not track prod builds
+prod/
+
+# Do not track compiled assets
+dev/assets/css/styles.*
+dev/assets/js/bundle.js
