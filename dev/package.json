@@ -1,0 +1,48 @@
+{
+  "name": "basic-front-end-template",
+  "version": "0.0.1",
+  "description": "This is a version of Camilo Sanchez base-starting-template to fit my estructure needs focused on building vanilla interfaces",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --source-map true --include-path scss sass/styles.scss --output-style compressed -o assets/css/ --importer node_modules/node-sass-import",
+    "watch-css": "nodemon -e scss -x 'npm run build-css'",
+    "build-js": "browserify ./js-modules/main.js -o assets/js/bundle.js",
+    "watch-js": "watchify --debug ./js-modules/main.js -o assets/js/bundle.js -v",
+    "browsersync": "browser-sync start --files 'assets/css/*.css, assets/js/*.js, *.html' --server",
+    "start": "npm run watch-css & npm run watch-js & npm run browsersync",
+    "copy-html": "find . -name '*.html' | grep -v ./node_modules | cpio -updm ../prod",
+    "copy-assets": "cp -r ./assets ../prod",
+    "build-prod": "npm run copy-html && npm run copy-assets"
+  },
+  "keywords": [
+    "front",
+    "end",
+    "tooling",
+    "html",
+    "css",
+    "template",
+    "sass",
+    "browsersync"
+  ],
+  "authors": [
+    "Camilo Sanchez",
+    "Chris Vargas",
+    "Ivan Alburquerque"
+  ],
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/chrisvpr/base-starting-template"
+  },
+  "devDependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "node-sass": "^4.5.0",
+    "node-sass-import": "^2.0.1",
+    "nodemon": "^1.11.0",
+    "watchify": "^3.9.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.18.7",
+    "browserify": "^16.1.1",
+    "normalize.css": "^8.0.0"
+  }
+}

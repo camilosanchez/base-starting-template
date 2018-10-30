@@ -12,7 +12,12 @@ You can create additional `.scss` files under the `/sass/partials` directory to 
 I left there the basic partials you need to set up like typography, buttons, figures and variables.
 
 I find this approach super convenient because you write super high maintainable code as you modularize your components into different sass and js files, and in the end you only have to load one css and one js without losing that maintainability. You also can take advantage of `requirejs` on the browser with browserify.
+ 
 
+## First Steps
+0. Rename the project: (template=name of your project)
+1. Remember to configure your prod folder over SSHFS to be the same folder your production.
+ 
 ## Installation
 
 **NPM**
@@ -39,12 +44,19 @@ npm run start
 ```
 **Note:** If you can't see the css applied at this point and just see the default styles from the browser, don't worry just refresh your browser and you will see it.
 
+**Step 4**
+when finished, copy the files that go to production.
+
+```sh
+npm run build-prod
+```
+
 ## What does it do, what's the point?
 
 I found myself building this set up again and again every time I had to start a new project.
 This template comes with the minimum set up needed to begin working with your HTML template.
 
-It includes Nicolas Gallagher's [normalize.css](https://github.com/necolas/normalize.css) to properly reset default browsers css. As an optional, I included the super awesome [Susy](http://susy.oddbird.net/) library. If you don't want to use it, just go to `/sass/styles.scss` and comment the line that has `@import "susy";`.
+It includes Nicolas Gallagher's [normalize.css](https://github.com/necolas/normalize.css) to properly reset default browsers css.
 
 It also includes the [breakpoint-sass](https://github.com/at-import/breakpoint) library to help you write media queries in Sass in a super simple way.
 
@@ -72,3 +84,6 @@ Created by Camilo Sanchez.
 - [Dribbble](https://dribbble.com/camilosanchez)
 - [Medium](https://medium.com/@camilosanchez)
 - email: camilosanchez40ATgmail.com
+
+
+
