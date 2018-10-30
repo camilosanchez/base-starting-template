@@ -1,10 +1,9 @@
 {
-  "name": "Basic-Front-end-Template",
+  "name": "basic-front-end-template",
   "version": "0.0.1",
   "description": "This is a version of Camilo Sanchez base-starting-template to fit my estructure needs focused on building vanilla interfaces",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --source-map true --include-path scss sass/styles.scss --output-style compressed -o assets/css/ --importer node_modules/node-sass-import",
     "watch-css": "nodemon -e scss -x 'npm run build-css'",
     "build-js": "browserify ./js-modules/main.js -o assets/js/bundle.js",
@@ -25,12 +24,19 @@
     "sass",
     "browsersync"
   ],
-  "author": "Camilo Sanchez ft Chris Vargas",
+  "authors": [
+    "Camilo Sanchez",
+    "Chris Vargas",
+    "Ivan Alburquerque"
+  ],
   "license": "MIT",
+  "repository": {
+    "url": "https://github.com/chrisvpr/base-starting-template"
+  },
   "devDependencies": {
     "breakpoint-sass": "^2.7.1",
     "node-sass": "^4.5.0",
-    "node-sass-import": "^1.1.1",
+    "node-sass-import": "^2.0.1",
     "nodemon": "^1.11.0",
     "watchify": "^3.9.0"
   },
